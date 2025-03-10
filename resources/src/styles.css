@@ -1,0 +1,124 @@
+*,*::before,*::after {
+    box-sizing: border-box;
+    margin: 0px;
+    border: 0px;
+}
+
+:root {
+    --mainColor0: #ff8daa;
+    --mainColor1: #fdaeae;
+    --mainColor2: #f6e2b3;
+    --mainColor3: #b49982;
+    --mainColor4: #7e6651;
+
+}
+
+#Bem-Vindos {
+    height: 80vh;
+    width: 100%;
+    background-image: url(images/planoFundo.jpg);
+    background-position: 50% 43%;
+    background-repeat: no-repeat;
+    color: whitesmoke;
+}
+
+#Bem-Vindos > #Texto-Bem-Vindos {
+    top: 30%;
+    transform: translateY(-70%);
+    position: relative;
+}
+
+#Texto-Bem-Vindos h1 {
+    font-size: 10vh;
+}
+
+#Texto-Bem-Vindos p {
+    font-size: 6vh;
+}
+
+#Texto-Bem-Vindos p span {
+    color: var(--mainColor2);
+    text-shadow: 0.1em 0.1em 5px var(--mainColor3);
+}
+
+#Presentes {
+    width: 100%;
+    height: 80vh;
+    position: relative;
+}
+
+.Locais {
+    width: 80vw;
+    display:flex;
+    overflow-x: scroll;
+}
+
+.Locais div {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 20px;
+    padding: 10px;
+    flex: none;
+}
+
+@media screen and (width>=1000px) {
+
+    .Locais div {
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-gap: 20px;
+        padding: 10px;
+        flex: none;
+    }
+    
+    .Locais div span {
+        width: 65vw;
+        height: 70vh;
+        display: grid;
+        flex-direction: row;
+        grid-template-columns: auto auto auto auto;
+        grid-gap: 20px;
+        padding: 10px;
+        flex: none;
+    }
+}
+
+@media (max-width: 1000px) {
+    .Locais div span {
+        width: 150vw;
+        height: 50vh;
+        display: grid;
+        flex-direction: row;
+        grid-template-columns: auto auto;
+        grid-gap: 20px;
+        padding: 10px;
+        flex: none;
+    }
+    
+}
+
+
+.Locais div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.Locais::-webkit-scrollbar{
+    display: none;
+}
+
+.Locais-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-block-end: 10% auto;
+}
+#backBtn, #nextBtn{
+    font-size: 5em;
+    width: 10vw;
+    cursor: pointer;
+    margin: 5vw;
+}
