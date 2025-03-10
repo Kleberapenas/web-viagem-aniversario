@@ -1,7 +1,7 @@
 let scrollContainer = document.querySelector('.Locais');
 let backBtn = document.getElementById('backBtn');
 let nextBtn = document.getElementById('nextBtn');
-let fotoMudar = document.getElementsByClassName('foto');
+let fotoMudar = document.getElementById('foto');
 
 scrollContainer.addEventListener('wheel',(evt)=>{
     evt.preventDefault();
@@ -9,19 +9,11 @@ scrollContainer.addEventListener('wheel',(evt)=>{
 });
 
 nextBtn.addEventListener('click', ()=>{
-    if(screen.width>=1000){
-    scrollContainer.scrollLeft += screen.width*0.65;
-} else {
-    scrollContainer.scrollLeft += screen.width*1.5;
-}
+    scrollContainer.scrollLeft += screen.width*0.64;
 });
 
 backBtn.addEventListener('click', ()=>{
-    if(screen.width>=1000){
-        scrollContainer.scrollLeft -= screen.width*0.65;
-    } else {
-        scrollContainer.scrollLeft -= screen.width*1.5;
-    }
+        scrollContainer.scrollLeft -= screen.width*0.64;
 });
 
 fotoMudar.addEventListener('click',()=>{
@@ -30,13 +22,9 @@ fotoMudar.addEventListener('click',()=>{
     } else {
         displayImage.src
     }
-})
+});
 
 function changeImage() {
-    if('.jpeg' in displayImage.src){
-        displayImage.src= 'resources\src\images\QRCode.jpg'
-    } else {
-        displayImage.src
-    }
+    fotoMudar.displayImage.src='resources\src\images\QRCode.jpg';
 };
 
