@@ -72,7 +72,7 @@ function codigopix(x) {
         break
     case 9:
         document.getElementById('pix').innerText = 
-        `<h1>Caminho Niemeyer - R$0</h1>
+        `<h1>Caminho Niemeyer - R$60</h1>
         <p>Chave Pix: kamilalimasilva354@gmail.com</p>`
         break
     case 10:
