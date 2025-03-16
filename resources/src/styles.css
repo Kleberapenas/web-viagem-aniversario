@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Bigshot+One&display=swap');
+
 *,*::before,*::after {
     box-sizing: border-box;
     margin: 0px;
     border: 0px;
+    font-family: 'Bigshot One';
 }
 
 :root {
@@ -24,12 +27,12 @@
 
 #Bem-Vindos > #Texto-Bem-Vindos {
     top: 30%;
-    transform: translateY(-70%);
+    transform: translateY(-40%);
     position: relative;
 }
 
 #Texto-Bem-Vindos h1 {
-    font-size: 10vh;
+    font-size: 15vh;
 }
 
 #Texto-Bem-Vindos p {
@@ -88,13 +91,24 @@
 @media (max-width: 1000px) {
     .Locais div span {
         width: 250vw;
-        height: 80vh;
+        height: 60vh;
         display: grid;
         flex-direction: row;
         grid-template-columns: auto auto auto auto;
         grid-gap: 20px;
         padding: 10px;
         flex: none;
+    }
+
+    #Texto-Bem-Vindos h1 {
+        font-size: 15vh;
+        text-shadow:1vh 1vw 5px var(--mainColor4);
+    }
+    
+    #Texto-Bem-Vindos p {
+        color: var(--mainColor0);
+        font-size: 6vh;
+        text-shadow:1vh 1vw 5px var(--mainColor4);
     }
     
 }
@@ -124,7 +138,8 @@
 }
 
 #pix {
-    width: 90vw;
+    font-family: 'Times New Roman', Times, serif;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
